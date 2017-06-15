@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<!--
+******** Refer Document For Plugin and Example **********
+*                                                       *
+*   https://github.com/krunalwave/cordova-sms-plugin/   *
+*                                                       *
+*********************************************************
+-->
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <title>SMS App</title>
+</head>
+
+<body>
+    <div>
+        <h1>SMS Send/Recieve</h1>
+    </div>
+
+    <input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
+    <textarea id="messageTxt" placeholder="Enter message"></textarea>
+    <input type="button" onclick="sendSms()" value="Send SMS" />
+    <input type='button' value='checkConnection' onclick="checkConnection();"><br>
+</body>
+
+</html>
