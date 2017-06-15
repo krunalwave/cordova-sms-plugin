@@ -10,7 +10,7 @@ Using the Cordova CLI and NPM, run:
 
 It is also possible to install via repo url directly (unstable), run :
 
-    cordova plugin add https://github.com/cordova-sms/cordova-sms-plugin.git
+    cordova plugin add https://github.com/krunalwave/cordova-sms-plugin.git
 
 ## Using the plugin
 HTML
