@@ -17,12 +17,11 @@ HTML
 
     <input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
     <textarea id="messageTxt" placeholder="Enter message"></textarea>
-    <input type="button" onclick="app.sendSms()" value="Send SMS" />
+    <input type="button" onclick="sendSms()" value="Send SMS" />
 
 Javascript
 
-    var app = {
-        sendSms: function() {
+        function sendSms() {
             var number = document.getElementById('numberTxt').value;
             var message = document.getElementById('messageTxt').value;
             console.log("number=" + number + ", message= " + message);
@@ -40,12 +39,10 @@ Javascript
             var error = function (e) { alert('Message Failed:' + e); };
             sms.send(number, message, options, success, error);
         }
-    };
 
 On Android, an extra function is exposed to know whether or not you have the permission to send a SMS (Android Marshmallow permission).
 
-    var app = {
-        checkSMSPermission: function() {
+        function checkSMSPermission() {
             var success = function (hasPermission) { 
                 if (hasPermission) {
                     sms.send(...);
@@ -58,7 +55,6 @@ On Android, an extra function is exposed to know whether or not you have the per
             var error = function (e) { alert('Something went wrong:' + e); };
             sms.hasPermission(success, error);
         }
-    };
 
 ## FAQ
 #### `sms` is undefined
